@@ -2,28 +2,31 @@
   "name": "goldenland-nextjs",
   "version": "1.0.0",
   "private": true,
-  "description": "Golden Land Construction & Development Inc. — premium residential, commercial, and government-ready website.
+  "description": "Golden Land Construction & Development Inc. — premium residential, commercial, and government-ready website.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "next": "^14.2.33",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
     "@fontsource-variable/fraunces": "5.0.21",
     "@fontsource-variable/inter": "5.0.18",
-    "@fontsource/ibm-plex-mono": "5.0.13",
-    "next": "^14.2.35",
-    "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "@fontsource/ibm-plex-mono": "5.0.13"
   },
   "devDependencies": {
+    "typescript": "5.4.5",
     "@types/node": "20.12.7",
     "@types/react": "18.3.1",
     "@types/react-dom": "18.3.0",
     "autoprefixer": "10.4.19",
     "postcss": "8.4.38",
     "tailwindcss": "3.4.4",
-    "typescript": "5.4.5"
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.33"
   }
 }
