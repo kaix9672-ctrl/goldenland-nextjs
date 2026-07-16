@@ -1,0 +1,61 @@
+/* Self-hosted fonts (no external network needed at build or runtime). */
+@import "@fontsource-variable/fraunces/index.css";
+@import "@fontsource-variable/inter/index.css";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "@fontsource/ibm-plex-mono/500.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-paper text-ink font-sans antialiased;
+    font-feature-settings: "ss01", "cv05";
+  }
+  ::selection {
+    @apply bg-gold/25;
+  }
+}
+
+@layer components {
+  /* Eyebrow label — architectural spec-sheet annotation. */
+  .eyebrow {
+    @apply font-mono text-[0.72rem] uppercase tracking-eyebrow text-gold;
+  }
+  .eyebrow-dark {
+    @apply font-mono text-[0.72rem] uppercase tracking-eyebrow text-goldsoft;
+  }
+  .rule-gold {
+    @apply h-px w-10 bg-gold;
+  }
+  .container-gl {
+    @apply mx-auto w-full max-w-content px-6 md:px-10;
+  }
+  /* Signature motif: the credential ledger reads like a drawing title-block. */
+  .ledger-row {
+    @apply flex items-baseline justify-between gap-4 border-b border-linedark/60 py-2.5;
+  }
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-sm bg-gold px-6 py-3 font-sans text-sm font-medium text-ink transition-colors hover:bg-goldsoft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold;
+  }
+  .btn-ghost {
+    @apply inline-flex items-center justify-center rounded-sm border border-ink/25 px-6 py-3 font-sans text-sm font-medium text-ink transition-colors hover:border-ink/60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-ink;
+  }
+  .btn-ghost-dark {
+    @apply inline-flex items-center justify-center rounded-sm border border-white/25 px-6 py-3 font-sans text-sm font-medium text-white transition-colors hover:border-white/70 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-goldsoft;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
