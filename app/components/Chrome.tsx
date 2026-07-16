@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { company } from "@/lib/credentials";
-import { nav } from "@/lib/site";
+import { nav, kairos } from "@/lib/site";
+import { MobileNav } from "./MobileNav";
 
 export function Header() {
   return (
@@ -21,9 +22,12 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <Link href="/contact/" className="btn-primary hidden px-5 py-2.5 text-xs sm:inline-flex">
-          Start a project
-        </Link>
+        <div className="flex items-center gap-3">
+          <Link href="/contact/" className="btn-primary hidden px-5 py-2.5 text-xs lg:inline-flex">
+            Start a project
+          </Link>
+          <MobileNav />
+        </div>
       </div>
     </header>
   );
@@ -64,6 +68,28 @@ export function Footer() {
             <li>SAM.gov: submitted / processing</li>
             <li>NAICS 236220 (primary)</li>
           </ul>
+        </div>
+      </div>
+      {/* Technology Partner — KAIROS (additive) */}
+      <div className="border-t border-linedark">
+        <div className="container-gl flex flex-col items-start justify-between gap-3 py-6 md:flex-row md:items-center">
+          <div>
+            <p className="eyebrow-dark">Technology Partner</p>
+            <p className="mt-2 text-sm text-concrete/80">
+              Powered by{" "}
+              <Link href="/technology/" className="text-white hover:text-goldsoft">
+                {kairos.name}
+              </Link>
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-x-5 gap-y-2 font-mono text-xs text-concrete/60">
+            <a href={kairos.site} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+              kairosaiagent.com
+            </a>
+            <a href={kairos.app} target="_blank" rel="noopener noreferrer" className="hover:text-white">
+              app.kairosaiagent.com
+            </a>
+          </div>
         </div>
       </div>
       <div className="border-t border-linedark">

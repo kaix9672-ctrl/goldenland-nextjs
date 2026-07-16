@@ -3,11 +3,25 @@
 export const nav = [
   { label: "Residential", href: "/residential/" },
   { label: "Commercial", href: "/commercial/" },
+  { label: "Government", href: "/government/" },
   { label: "Projects", href: "/projects/" },
   { label: "Process", href: "/process/" },
   { label: "About", href: "/about/" },
-  { label: "Government", href: "/government/" },
+  { label: "Technology", href: "/technology/" },
 ];
+
+/** KAIROS technology partner — single source of truth for links/handles. */
+export const kairos = {
+  name: "KAIROS Property Intelligence",
+  site: "https://kairosaiagent.com",
+  app: "https://app.kairosaiagent.com",
+  support: "support@kairosaiagent.com",
+  social: {
+    instagram: "https://instagram.com/kairosaiproperty",
+    tiktok: "https://tiktok.com/@kairospropertyofficial",
+    x: "https://x.com/kairosintellos",
+  },
+};
 
 export const residentialServices = [
   ["Architectural concrete", "Board-formed, polished, and microcement surfaces as a design feature, not an afterthought."],
