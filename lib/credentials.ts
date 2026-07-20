@@ -33,7 +33,7 @@ export const company = {
   // TODO(founder): confirm the public procurement contact before launch.
   procurement: {
     name: "Government Contracts Office", // replace with a named contact
-    email: "government@goldenlandconstruction.com", // confirm / create this alias
+    email: "info@goldenlandconstruction.com", // confirm / create this alias
     phone: "", // add a direct line when available
   },
 } as const;
