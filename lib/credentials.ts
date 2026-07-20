@@ -34,11 +34,11 @@ export const company = {
   contact: {
     email: "info@goldenlandconstruction.com", // confirm / create this alias
   },
-  // TODO(founder): confirm the public procurement contact before launch.
-  // Government procurement ONLY (government page, capability statement, SAM, RFI/RFP/RFQ).
+  // Government procurement contact. Uses the single active info@ alias
+  // (founder decision 2026-07-20: no government@ alias exists — do not reintroduce it).
   procurement: {
     name: "Government Contracts Office", // replace with a named contact
-    email: "government@goldenlandconstruction.com", // confirm / create this alias
+    email: "info@goldenlandconstruction.com",
     phone: "", // add a direct line when available
   },
 } as const;

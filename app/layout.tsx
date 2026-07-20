@@ -40,6 +40,7 @@ const orgSchema = {
   name: company.legalName,
   alternateName: "Golden Land",
   url: company.website,
+  email: company.contact.email,
   areaServed: "Los Angeles County, California",
   foundingDate: company.founded,
   address: {
