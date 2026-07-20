@@ -30,10 +30,15 @@ export const company = {
   founded: "2021",
   headquarters: "Los Angeles County, California",
   website: "https://goldenlandconstruction.com",
+  // General customer inquiries (homepage, footer, contact form, residential/commercial).
+  contact: {
+    email: "info@goldenlandconstruction.com", // confirm / create this alias
+  },
   // TODO(founder): confirm the public procurement contact before launch.
+  // Government procurement ONLY (government page, capability statement, SAM, RFI/RFP/RFQ).
   procurement: {
     name: "Government Contracts Office", // replace with a named contact
-    email: "info@goldenlandconstruction.com", // confirm / create this alias
+    email: "government@goldenlandconstruction.com", // confirm / create this alias
     phone: "", // add a direct line when available
   },
 } as const;

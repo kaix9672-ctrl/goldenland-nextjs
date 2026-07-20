@@ -63,6 +63,12 @@ export default function Contact() {
                 </label>
                 <button type="submit" className="btn-primary">Send inquiry</button>
               </form>
+              <p className="mt-6 text-sm text-slate">
+                Prefer email? Reach us at{" "}
+                <a href={`mailto:${company.contact.email}`} className="font-mono text-ink hover:text-gold">
+                  {company.contact.email}
+                </a>
+              </p>
             </div>
 
             {/* Procurement contact */}

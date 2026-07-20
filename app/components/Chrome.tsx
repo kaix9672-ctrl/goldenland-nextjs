@@ -44,6 +44,12 @@ export function Footer() {
             residential, commercial, and public-agency clients across{" "}
             {company.headquarters}.
           </p>
+          <a
+            href={`mailto:${company.contact.email}`}
+            className="mt-4 inline-block font-mono text-sm text-concrete/80 hover:text-white"
+          >
+            {company.contact.email}
+          </a>
         </div>
         <div>
           <p className="eyebrow-dark">Explore</p>
